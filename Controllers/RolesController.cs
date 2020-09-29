@@ -54,7 +54,7 @@ namespace DiscordEventBot.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Template,Emote,Filter,LeadTime")] Role role)
+        public async Task<IActionResult> Create([Bind("Id,Name,DiscordText,Template,Emote,Filter,LeadTime")] Role role)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace DiscordEventBot.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Template,Emote,Filter,LeadTime")] Role role)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,DiscordText,Template,Emote,Filter,LeadTime")] Role role)
         {
             if (id != role.Id)
             {

@@ -14,7 +14,7 @@ namespace DiscordEventBot.Models.db
 
         public string Template { get; set; }
 
-        public List<Role> Roles { get; set; }
+        public List<Role> Roles { get; set; } = new List<Role>();
         public DiscordBot DiscordBot { get; set; }
     }
 }
